@@ -1,0 +1,109 @@
+package servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class StudentFrontent
+ */
+public class StudentFrontent extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public StudentFrontent() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		pw.write("<style>");
+		pw.write(</style>);
+		
+		pw.write("<div class=\"container\">\r\n"
+				+ "        <header>\r\n"
+				+ "            <h1 id=\"title\"> Student Registration Form</h1>\r\n"
+				+ "            <p id=\"description\">Fill your Details Here</p>\r\n"
+				+ "        </header>\r\n"
+				+ "        <div class=\"form-wrapper\">\r\n"
+				+ "            <form id=\"survey-form\">\r\n"
+				+ "                <div class=\"name\">\r\n"
+				+ "                    <label id=\"name-label\">Name</label><br>\r\n"
+				+ "                    <input type=\"text\" class=\"input-styling\" id=\"name\" placeholder=\"Enter Name\" required>\r\n"
+				+ "                </div>\r\n"
+				+ "                <div class=\"email\">\r\n"
+				+ "                    <label id=\"email-label\">Email address</label><br>\r\n"
+				+ "                    <input type=\"email\" class=\"input-styling\" id=\"email\" placeholder=\"Enter Email address\" required>\r\n"
+				+ "                </div>\r\n"
+				+ "              <div class=\"code\">\r\n"
+				+ "                    <label id=\"number-label\">Area Code</label><br>     \r\n"
+				+ "                    <input type=\"number\" class=\"input-styling\" id=\"number\" placeholder=\"Enter Area code\" pattern=\"[0-9]{3}\" min=\"001\" max=\"999\" required>\r\n"
+				+ "                </div>\r\n"
+				+ "                <div class=\"number\">\r\n"
+				+ "                    <label>Phone number</label><br>        \r\n"
+				+ "                    <input type=\"number\" class=\"input-styling\" id=\"number\" placeholder=\"Enter Phone Number\" pattern=\"[0-9]{10}\" required>\r\n"
+				+ "                </div>\r\n"
+				+ "                \r\n"
+				+ "                <div class=\"nationality\">\r\n"
+				+ "                    <label>Nationality</label><br>\r\n"
+				+ "                    <input list=\"dropdown\" class=\"input-styling\">\r\n"
+				+ "                    <datalist id=\"dropdown\">\r\n"
+				+ "                        <option value=\"Alaska\">Alaska</option>            \r\n"
+				+ "                        <option value=\"Arizona\">Arizona</option>\r\n"
+				+ "                        <option value=\"California\">California</option>            \r\n"
+				+ "                        <option value=\"Florida\">Florida</option>\r\n"
+				+ "                        <option value=\"New York\">New York</option>\r\n"
+				+ "                        <option value=\"Ohio\">Ohio</option>\r\n"
+				+ "                        <option value=\"Washington\">Washington</option>\r\n"
+				+ "                        <option value=\"Other\">Other</option>\r\n"
+				+ "                    </datalist>\r\n"
+				+ "                </div>\r\n"
+				+ "                <div class=\"gender\">\r\n"
+				+ "                    <label id=\"gender\">Select gender</label><br>\r\n"
+				+ "                        <input type=\"radio\" name=\"gender\" value=\"male\" checked> Male<br>\r\n"
+				+ "                        <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\r\n"
+				+ "                        <input type=\"radio\" name=\"gender\" value=\"other\"> Other  \r\n"
+				+ "                </div>\r\n"
+				+ "\r\n"
+				+ "                <div class=\"facilities\">        \r\n"
+				+ "                    <label id=\"facilities\">Select the facilities you want to avail?</label><br>\r\n"
+				+ "                    <input type=\"checkbox\" name=\"facilities\" value=\"Accomodation\">Accomodation<br>\r\n"
+				+ "                    <input type=\"checkbox\" name=\"facilities\" value=\"Canten\">Canteen<br>\r\n"
+				+ "                    <input type=\"checkbox\" name=\"facilities\" value=\"Bus\">Bus\r\n"
+				+ "                </div>\r\n"
+				+ "                <div class=\"queries\">\r\n"
+				+ "                    <label id=\"queries\">Enter if you have any query</label><br>\r\n"
+				+ "                    <textarea name=\"Querytext\" class=\"input-styling\" style=\"height: 100px;\" placeholder=\"Enter your query here\"> </textarea><br>\r\n"
+				+ "                </div>\r\n"
+				+ "                <div class=\"submit\">\r\n"
+				+ "                    <button type=\"submit\" id=\"submit\">Submit</button>\r\n"
+				+ "                </div>\r\n"
+				+ "            </form>\r\n"
+				+ "        </div>\r\n"
+				+ "    </div>\r\n"
+				+ "");;
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
