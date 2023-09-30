@@ -1,4 +1,5 @@
-Student_Registeration is First Project 
+<h3>Student_Registeration is First Project </h3>
+<hr>
 
 Its Includes two Servlet files :
 1) StudentFrontend
