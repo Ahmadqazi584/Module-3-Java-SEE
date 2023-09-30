@@ -1,5 +1,5 @@
 <h3>Student_Registeration is First Project </h3>
-<hr>
+<hr size="1">
 
 Its Includes two Servlet files :
 1) StudentFrontend
